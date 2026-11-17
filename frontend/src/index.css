@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.light .glass-card {
+  background: rgba(248, 250, 252, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Prism syntax highlighting theme overrides */
+pre[class*="language-"] {
+  background: #0d1117 !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+code[class*="language-"] {
+  font-family: 'Fira Code', monospace;
+  text-shadow: none !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #c9d1d9;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #79c0ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a5d6ff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d2a8ff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #ff7b72;
+  font-weight: 500;
+}
+
+.token.function,
+.token.class-name {
+  color: #d2a8ff;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ffa657;
+}
